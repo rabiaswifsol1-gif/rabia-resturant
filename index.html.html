@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rabia Restaurant – Desi and Fast Food</title>
+<style>
+:root{--bg:#fffaf5;--card:#fff;--ink:#2b2118;--mute:#7a6a5c;--or:#f26b1d;--or2:#ff9a4d;--soft:#fff0e3;--line:#f3dfcf;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1611;--card:#2a2019;--ink:#fff3e8;--mute:#cdb8a5;--soft:#3a2a1e;--line:#4a3626}}
+:root[data-theme="dark"]{--bg:#1d1611;--card:#2a2019;--ink:#fff3e8;--mute:#cdb8a5;--soft:#3a2a1e;--line:#4a3626}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--card)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--card);border-bottom:1px solid var(--line)}
+.bar{max-width:1050px;margin:auto;display:flex;align-items:center;gap:14px;padding:10px 16px}
+.logo{font-weight:800;font-size:20px;color:var(--or);white-space:nowrap;text-decoration:none}
+nav{display:flex;gap:4px;overflow-x:auto;margin-left:auto;scrollbar-width:none}
+nav a{padding:8px 13px;border-radius:99px;color:var(--ink);text-decoration:none;font-size:14.5px;white-space:nowrap;font-weight:600}
+nav a.on{background:var(--or);color:#fff}
+main{max-width:1050px;margin:auto;padding:0 16px 40px}
+.page{display:none}.page.show{display:block;animation:f .35s}
+@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.hero{margin-top:18px;border-radius:26px;padding:44px 22px;text-align:center;color:#fff;background:radial-gradient(circle at 20% 20%,#ffb677,transparent 45%),linear-gradient(135deg,#f26b1d,#ff9a4d)}
+.plates{font-size:clamp(46px,12vw,92px);letter-spacing:6px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
+.hero h1{margin:8px 0 6px;font-size:clamp(34px,8vw,60px);line-height:1.1}
+.hero p{margin:0 auto 22px;max-width:520px;font-size:clamp(16px,3.6vw,20px)}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:13px 26px;border-radius:99px;background:#fff;color:var(--or);text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.btn.o{background:var(--or);color:#fff}.btn.g{background:#25d366;color:#fff}
+h2{font-size:clamp(26px,6vw,36px);margin:34px 0 4px}h2+.sub{color:var(--mute);margin:0 0 18px}
+h3{margin:26px 0 12px;color:var(--or)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;font-weight:600}
+.row b{color:var(--or);white-space:nowrap}
+.sp{text-align:center}.sp .e{font-size:54px}.sp .pr{color:var(--or);font-weight:800}.sp p{color:var(--mute);margin:6px 0}
+.gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.gal div{aspect-ratio:1;border-radius:18px;background:var(--soft);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:56px;border:1px solid var(--line)}
+.gal span{font-size:14px;font-weight:700;color:var(--ink);margin-top:4px}
+.info{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.info .card .e{font-size:30px}
+label{display:block;font-weight:600;margin:12px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font:inherit;background:var(--bg);color:var(--ink)}
+.chk{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed var(--line)}
+.chk input{width:62px;text-align:center;padding:7px}
+.tot{font-size:20px;font-weight:800;color:var(--or);margin:14px 0}
+footer{text-align:center;color:var(--mute);padding:24px 16px;border-top:1px solid var(--line);font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="#home">🍛 Rabia Restaurant</a>
+<nav id="nav"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#special">Special Dishes</a><a href="#order">Order Online</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+
+<section class="page" id="home">
+<div class="hero"><div class="plates">🍛🍗🍢🍕</div><h1>Rabia Restaurant</h1><p>All Desi and Fast Food Available In My Restaurant</p><a class="btn" href="#order">Order Now</a></div>
+<div class="info" style="margin-top:20px">
+<div class="card"><div class="e">🕚</div><b>Open Daily</b><br>11 AM to 11 PM</div>
+<div class="card"><div class="e">🍽️</div><b>Desi and Fast Food</b><br>Fresh, hot and tasty</div>
+<div class="card"><div class="e">💬</div><b>Order on WhatsApp</b><br>Quick and easy</div></div>
+</section>
+
+<section class="page" id="menu">
+<h2>Our Menu</h2><p class="sub">Fresh food, made with love. Prices in Rs.</p>
+<h3>🍛 Desi Food</h3>
+<div class="row">Chicken Biryani <b>350 Rs</b></div><div class="row">Chicken Karahi <b>1200 Rs</b></div><div class="row">Malai Boti <b>600 Rs</b></div><div class="row">BBQ Tikka <b>500 Rs</b></div><div class="row">Naan <b>50 Rs</b></div>
+<h3>🍔 Fast Food</h3>
+<div class="row">Zinger Burger <b>450 Rs</b></div><div class="row">Pizza <b>900 Rs</b></div><div class="row">Shawarma <b>250 Rs</b></div><div class="row">Fries <b>200 Rs</b></div>
+<h2>Gallery</h2>
+<div class="gal"><div>🍛<span>Biryani</span></div><div>🍲<span>Karahi</span></div><div>🍢<span>BBQ</span></div><div>🍔<span>Burger</span></div><div>🍕<span>Pizza</span></div></div>
+<p style="text-align:center;margin-top:24px"><a class="btn g" data-wa="Assalam o Alaikum! I want to order from Rabia Restaurant." href="#">WhatsApp Order</a></p>
+<div class="info" style="margin-top:10px"><div class="card">📍 <b>Address</b><br>Your Street Address, City, Pakistan</div><div class="card">🕚 <b>Timing</b><br>11 AM to 11 PM</div></div>
+</section>
+
+<section class="page" id="special">
+<h2>Special Dishes</h2><p class="sub">Our customers’ favourites</p>
+<div class="grid">
+<div class="card sp"><div class="e">🍛</div><h3 style="margin:6px 0">Chicken Biryani</h3><p>Fragrant rice with spicy, tender chicken.</p><div class="pr">350 Rs</div></div>
+<div class="card sp"><div class="e">🍲</div><h3 style="margin:6px 0">Chicken Karahi</h3><p>Rich tomato and masala karahi, served hot.</p><div class="pr">1200 Rs</div></div>
+<div class="card sp"><div class="e">🍢</div><h3 style="margin:6px 0">Malai Boti</h3><p>Creamy, juicy and soft boti.</p><div class="pr">600 Rs</div></div>
+<div class="card sp"><div class="e">🍗</div><h3 style="margin:6px 0">BBQ Tikka</h3><p>Smoky grilled tikka with spices.</p><div class="pr">500 Rs</div></div>
+<div class="card sp"><div class="e">🍔</div><h3 style="margin:6px 0">Zinger Burger</h3><p>Crispy, crunchy and full of flavour.</p><div class="pr">450 Rs</div></div>
+<div class="card sp"><div class="e">🍕</div><h3 style="margin:6px 0">Pizza</h3><p>Cheesy, hot and freshly baked.</p><div class="pr">900 Rs</div></div>
+</div>
+<p style="text-align:center;margin-top:22px"><a class="btn o" href="#order">Order Now</a></p>
+</section>
+
+<section class="page" id="order">
+<h2>Order Online</h2><p class="sub">Choose your items, then send the order on WhatsApp.</p>
+<div class="card" id="items"></div>
+<div class="tot">Total: <span id="tot">0</span> Rs</div>
+<div class="card">
+<label for="nm">Your Name</label><input id="nm" placeholder="Name">
+<label for="ph">Phone Number</label><input id="ph" type="tel" placeholder="03XX XXXXXXX">
+<label for="ad">Delivery Address</label><textarea id="ad" rows="2" placeholder="Full address"></textarea>
+<p style="text-align:center;margin:18px 0 4px"><button class="btn g" id="send" type="button">Send Order on WhatsApp</button></p></div>
+</section>
+
+<section class="page" id="contact">
+<h2>Contact Us</h2><p class="sub">We are happy to serve you.</p>
+<div class="info">
+<div class="card"><div class="e">📍</div><b>Address</b><br>Your Street Address, City, Pakistan</div>
+<div class="card"><div class="e">🕚</div><b>Timing</b><br>Every day, 11 AM to 11 PM</div>
+<div class="card"><div class="e">📞</div><b>Phone / WhatsApp</b><br>+92 300 0000000</div></div>
+<p style="text-align:center;margin-top:24px"><a class="btn g" data-wa="Assalam o Alaikum! I have a question for Rabia Restaurant." href="#">Chat on WhatsApp</a></p>
+</section>
+
+</main>
+<footer>© Rabia Restaurant · All Desi and Fast Food Available In My Restaurant</footer>
+<script>
+var WA="923000000000"; // replace with your WhatsApp number (92 + number without 0)
+var ITEMS=[["Chicken Biryani",350],["Chicken Karahi",1200],["Malai Boti",600],["BBQ Tikka",500],["Naan",50],["Zinger Burger",450],["Pizza",900],["Shawarma",250],["Fries",200]];
+var box=document.getElementById("items");
+ITEMS.forEach(function(it,i){var d=document.createElement("div");d.className="chk";d.innerHTML="<span>"+it[0]+" <b style='color:var(--or)'>"+it[1]+" Rs</b></span><input type='number' min='0' value='0' data-i='"+i+"' aria-label='"+it[0]+" quantity'>";box.appendChild(d)});
+function calc(){var t=0,l=[];box.querySelectorAll("input").forEach(function(x){var q=parseInt(x.value)||0;if(q>0){var it=ITEMS[x.dataset.i];t+=q*it[1];l.push(q+" x "+it[0])}});document.getElementById("tot").textContent=t;return{t:t,l:l}}
+box.addEventListener("input",calc);
+function wa(m){window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank")}
+document.getElementById("send").onclick=function(){var c=calc();if(!c.l.length){alert("Please choose at least one item.");return}
+wa("New Order - Rabia Restaurant\n"+c.l.join("\n")+"\nTotal: "+c.t+" Rs\nName: "+document.getElementById("nm").value+"\nPhone: "+document.getElementById("ph").value+"\nAddress: "+document.getElementById("ad").value)};
+document.querySelectorAll("[data-wa]").forEach(function(a){a.onclick=function(e){e.preventDefault();wa(a.dataset.wa)}});
+function route(){var h=(location.hash||"#home").slice(1);if(!document.getElementById(h))h="home";
+document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("show",p.id===h)});
+document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});scrollTo(0,0)}
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
